@@ -152,6 +152,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             action: #selector(AppDelegate.updateNotifications),
             keyEquivalent: "")
         
+        statusBarMenu.addItem(NSMenuItem.separator())
+        
+        statusBarMenu.addItem(
+            withTitle: "Toggles",
+            action: nil,
+            keyEquivalent: "")
+        
         statusBarMenu.addItem(
             withTitle: ((soundStatus == 1) ? "Disable Sounds" : "Enable Sounds"),
             action: #selector(AppDelegate.updateSounds),
@@ -165,6 +172,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         statusBarMenu.addItem(
             withTitle: ((meetingBypassStatus == 1) ? "Disable Meeting Bypass" : "Enable Meeting Bypass"),
             action: #selector(AppDelegate.updateMeetingBypass),
+            keyEquivalent: "")
+        
+        statusBarMenu.addItem(NSMenuItem.separator())
+        
+        statusBarMenu.addItem(
+            withTitle: "Debug",
+            action: nil,
             keyEquivalent: "")
         
         statusBarMenu.addItem(
@@ -184,10 +198,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             action: #selector(AppDelegate.openReleases),
             keyEquivalent: "")
         
-        statusBarMenu.addItem(
-            withTitle: "Give Feedback",
-            action: #selector(AppDelegate.openFeedback),
-            keyEquivalent: "")
+//        statusBarMenu.addItem(
+//            withTitle: "Give Feedback",
+//            action: #selector(AppDelegate.openFeedback),
+//            keyEquivalent: "")
         
         statusBarMenu.addItem(NSMenuItem.separator())
         
@@ -245,7 +259,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     
     @objc func openReleases() {
-        let url = URL(string: "https://github.com/tonyh4156/20-20-20/releases")!
+        let url = URL(string: "https://github.com/cprzytocki/20-20-20/releases")!
         if (NSWorkspace.shared.open(url)) {
             print("Successfully opened github releases!")
         }
