@@ -1,3 +1,17 @@
+# Updates In this Fork
+--------------
+- New Overlay Feature
+	- Cover's users main screen with a translucent window during the 20s breaks to help grab users attention.
+	- An overlay button allows skipping the break.
+- New Meeting Bypass Functionality
+	- Uses the users calendar events to skip breaks while in a meeting. 
+	- (Requires Calendar Permissions )
+- Update Menu options
+	- Change Check for Updates to link to this repo (forked from origin).
+	- Add debug option to send a notification/break immediately. Useful for both devs and users testing their settings.
+
+# Original ReadMe Below
+
 # Introduction
 --------------
 In today's society, many people spend a lot of time working with their computers, often leading to eye fatigue. Fortunately, there is a helpful trick known as the 20-20-20 rule where a person, for every 20 minutes, looks at something 20 feet away for 20 seconds. The application below attempts to provide users with consistent reminders that follow the rule and attempts to relieve some eye strain.
