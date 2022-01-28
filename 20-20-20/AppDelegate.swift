@@ -165,7 +165,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             keyEquivalent: "")
         
         statusBarMenu.addItem(
-            withTitle: ((overlayStatus == 1) ? "Disable Screen" : "Enable Screen"),
+            withTitle: ((overlayStatus == 1) ? "Disable Overlay" : "Enable Overlay"),
             action: #selector(AppDelegate.updateOverlay),
             keyEquivalent: "")
         
@@ -234,7 +234,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         let soundOptionItem = statusBarItem.menu?.item(at: 2)
         soundOptionItem?.title = ((soundStatus == 1) ? "Disable Sounds" : "Enable Sounds")
         let screenOptionItem = statusBarItem.menu?.item(at: 3)
-        screenOptionItem?.title = ((overlayStatus == 1) ? "Disable Screen" : "Enable Screen")
+        screenOptionItem?.title = ((overlayStatus == 1) ? "Disable Overlay" : "Enable Overlay")
         let meetingBypassOptionItem = statusBarItem.menu?.item(at: 4)
         meetingBypassOptionItem?.title = ((meetingBypassStatus == 1) ? "Disable Meeting Bypass" : "Enable Meeting Bypass")
     }
